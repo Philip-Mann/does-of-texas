@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./case.css">
+    <title>Cases</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Objective</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <div class="search-bar">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="img-container">
+        <img class="card-img-top" src="${caseFile.image}" alt="Card image cap">
+      </div>
+
+    <div class="doe-card">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">${caseFile.doe_name} - ${caseFile.year_found} - ${caseFile.location_found}</h5>
+          <ul>
+            <li>
+              ${caseFile.sex}
+            </li>
+            <li>
+              ${caseFile.age}
+            </li>
+            <li>
+              ${caseFile.weight}
+            </li>
+            <li>
+              ${caseFile.race}
+            </li>
+            <li>
+              ${caseFile.cod}
+            </li>
+            <li>
+              ${caseFile.body_condition}
+            </li>
+          </ul>
+          <p class="card-text">${caseFile.info}</p>
+        </div>
+      </div>      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

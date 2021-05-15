@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+.header-container{
+    text-align: center;
+}
+
+.qoute {
+    text-align: center;
+}
+
+.qoute a {
+    text-decoration: none;
+}
+
+.cards-container {
+    width: 100%;
+    height: 1200px;
+}
+
+.card {
+    border: 3px solid purple;
+    width: 150px;
+}
+
+.card-img-top {
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 320px) {
+    .cards-container {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+}
+
