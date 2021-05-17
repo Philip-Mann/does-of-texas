@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./case.css">
-    <title>Cases</title>
+    <title>Case</title>
+    <style>
+        ul {
+          list-style-type: none;
+        }
+
+        .img-container {
+          display: flex;
+          justify-content: center;
+        }
+        .card-img {
+          width: 140px;
+        }
+
+        .doe-card {
+          display: flex;
+          justify-content: center;
+        }
+    </style>
 </head>
 <body>
     
@@ -18,31 +35,22 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Objective</a>
+                <a class="nav-link active" aria-current="page" href="/home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
             </ul>
-            <div class="search-bar">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
           </div>
         </div>
       </nav>
 
-      <div class="img-container">
-        <img class="card-img-top" src="${caseFile.image}" alt="Card image cap">
+      <div class="img-container" style="margin-top: 10px;">
+        <img class="card-img" src="${caseFile.image}" alt="Card image cap">
       </div>
 
-    <div class="doe-card">
-      <div class="card" style="width: 18rem;">
+    <div class="doe-card" style="text-align: center;margin-top: 10px;">
+      <div class="card" style="width: 40rem;">
         <div class="card-body">
           <h5 class="card-title">${caseFile.doe_name} - ${caseFile.year_found} - ${caseFile.location_found}</h5>
           <ul>
@@ -66,6 +74,7 @@
             </li>
           </ul>
           <p class="card-text">${caseFile.info}</p>
+          <a href="${caseFile.link}" class="btn btn-primary" target="_blank">Read More</a>
         </div>
       </div>      
     </div>

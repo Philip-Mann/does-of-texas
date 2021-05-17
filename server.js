@@ -5,8 +5,8 @@ const cases = require('./cases')
 
 const app = express();
 
-app.use(cors())     //cors express middleware
 app.use(express.static('public'))     //middleware for static files
+app.use(cors())     //cors express middleware
 
 app.engine('html', es6Renderer);     
 app.set('views', 'templates');       
@@ -18,31 +18,13 @@ const linked = ' \"https://www.nbcdfw.com/news/local/fort-worth-home-to-database
 const newsSource = "NBC DFW"
 
 
-app.get('/', (req, res) => {
-
+app.get('/home', (req, res) => {
+    
     const caseIds = Object.keys(cases)      //takes an object and
     const newCaseArray = caseIds.map( id => cases[id])      //converts it into an array
     const newImageArray = caseIds.map( image => cases[image])
-
+    
     res.render('home', {
-        locals: {       //makes an object
-            title: `${name}`,       //makes another object
-            qoute: `${qouter}`,
-            newslink: `${linked}`,
-            source: `${newsSource}`,
-            newCaseArray,
-            newImageArray
-        }
-    })
-})
-
-app.get('/case', (req, res) => {
-
-    const caseIds = Object.keys(cases)      //takes an object and
-    const newCaseArray = caseIds.map( id => cases[id])      //converts it into an array
-    const newImageArray = caseIds.map( image => cases[image])
-
-    res.render('cases', {
         locals: {       //makes an object
             title: `${name}`,       //makes another object
             qoute: `${qouter}`,
@@ -58,10 +40,10 @@ app.get("/case/:id", (req, res) => {
     const caseFile = cases[req.params.id]
 
     if(!caseFile){      //!caseFile === no caseFile
-        res.render('404')
+        res.send('404 Case Files not found')
     }
 
-    res.render("caseid", {
+    res.render("case", {
         locals: {
             caseFile        //name of variable is the name of the key, i could write it like this
         }
