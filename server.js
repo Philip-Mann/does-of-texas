@@ -1,4 +1,3 @@
-let PORT = process.env.PORT || 5000;
 const express = require('express');
 const cors = require('cors')
 const es6Renderer = require('express-es6-template-engine');
@@ -56,6 +55,6 @@ app.get("*", (req, res)=>{
     res.render("404")
 })
 
-app.listen(PORT, () => {
+app.listen("3000", () => {
     console.log('texas doe project server is running...')
 })
