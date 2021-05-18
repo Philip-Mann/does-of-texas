@@ -1,8 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/8fac576c-1f45-415e-b052-1f98303f2be3/resourceGroups/texas-doe-project-rg/providers/Microsoft.Web/sites/texas-doe-project",
-    "appService.deploySubpath": "."
-}
